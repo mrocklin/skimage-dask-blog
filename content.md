@@ -14,6 +14,8 @@ in scikit-image to leverage the multiple cores of a modern CPU.
 Scikit-image
 ------------
 
+*Section by Stefan van der Walt:*
+
 *  Scikit image builds off of NumPy with custom Cython code
 *  Algorithms are sophisticated, used daily, but generally restricted to
    a single-core.
@@ -25,6 +27,8 @@ Scikit-image
 Dask.array
 ----------
 
+*Section by Matthew Rocklin:*
+
 *   Dask.array cuts blocks out of a large array and orchestrates many numpy
     calls in parallel.
 *   Dask.array.ghost manages slightly overlapping sub-arrays, solving
@@ -34,12 +38,16 @@ Dask.array
 Efforts to combine the two
 --------------------------
 
+*Section by Blake Griffith*
+
 We came up with the following API to cross projects.  The following issues came
 up ...
 
 
 Initial results were GIL bound
 ------------------------------
+
+*Section by Arve Seljebu:*
 
 If we do a simple experiment ... and find that we don't get much speedup ...
 
@@ -49,6 +57,8 @@ at once.
 
 Releasing the GIL
 -----------------
+
+*Section by Johannes Schönberger*
 
 Fortunately the Cython in scikit-learn compiles down to C, not Python, so we
 can release the GIL in performance critical locations.
@@ -62,6 +72,8 @@ It took a couple days.
 
 Now things work well
 --------------------
+
+*Section by Arve Seljebu:*
 
 Final demonstration with speed difference.
 
